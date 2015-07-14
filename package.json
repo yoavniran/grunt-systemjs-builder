@@ -1,0 +1,35 @@
+{
+  "name": "grunt-systemjs-builder",
+  "version": "0.1.0",
+  "description": "grunt task for building project based on systemjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoavniran/grunt-systemjs-builder.git"
+  },
+  "keywords": [
+    "grunt",
+    "systemjs",
+    "builder",
+    "jspm"
+  ],
+  "author": {
+    "name": "yoav niran",
+    "url": "https://yoavniran.wordpress.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoavniran/grunt-systemjs-builder/issues"
+  },
+  "homepage": "https://github.com/yoavniran/grunt-systemjs-builder#readme",
+  "readme": "readme.md",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.2"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "systemjs-builder": "^0.12.2"
+  }
+}
