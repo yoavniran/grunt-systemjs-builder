@@ -1,6 +1,6 @@
 {
   "name": "grunt-systemjs-builder",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "grunt task for building project based on systemjs",
   "repository": {
     "type": "git",

@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/grunt-systemjs-builder.svg)](https://www.npmjs.com/package/grunt-systemjs-builder)
+
 # grunt-systemjs-builder
 
 ## Getting started
@@ -58,27 +60,32 @@ see [builder documentation](https://github.com/systemjs/builder/blob/master/READ
 the configuration that is allowed when running build or buildSFX
 see [builder documentation](https://github.com/systemjs/builder/blob/master/README.md).
 
+## Files
+
+Configuring the source and destination files is done in the standard grunt way using the "files" property of the target (see example below)
 
 ## Example
 
 
 ``` javascript
 
-systemjs: {
-            options: {
-                sfx: true,
-                baseURL: "./target/widget",
-                configFile: targetWidget + "/config.js"
-                //minify: true
-            },
-            dist: {
-                files: [{
-                    "src": targetWidget + "/src/init.js",
-                    "dest": "./target/bundles/widget.sfx.js" //add version to file
-                }]
-            }
-        }
-
-
+grunt.initConfig({
+	systemjs: {
+	            options: {
+	                sfx: true,
+	                baseURL: "./target",
+	                configFile: "./target/config.js"
+                	minify: true,
+					build: {
+					  mangle: false
+					}
+	            },
+	            dist: {
+	                files: [{
+	                    "src":  "./target/src/init.js",
+	                    "dest": "./target/bundles/app.min.js"
+	                }]
+	            }
+	        }
+});
 ```
-
