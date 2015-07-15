@@ -16,7 +16,7 @@ _grunt.loadNpmTasks("grunt-systemjs-builder");_
 
 _grunt systemjs_
 
- This is a [MultiTask](http://gruntjs.com/api/grunt.task#grunt.task.registermultitask) therefore it can run using different configuration using targets in the grunt configuration. see [grunt docs](http://gruntjs.com/configuring-tasks#task-configuration-and-targets) for more info
+ This is a [MultiTask](http://gruntjs.com/api/grunt.task#grunt.task.registermultitask) therefore it can run using different configuration using targets in the grunt configuration. see [grunt docs](http://gruntjs.com/configuring-tasks#task-configuration-and-targets) for more info.
 
 ## Options
 
@@ -26,13 +26,13 @@ In essence, this grunt task simply passes along configuration to the [SystemJS B
 
 "The baseURL provides a special mechanism for loading modules relative to a standard reference URL."
 
-[systemjs docs](The baseURL provides a special mechanism for loading modules relative to a standard reference URL.)
+[systemjs docs](https://github.com/systemjs/systemjs/blob/master/docs/overview.md#baseurl)
 
-_if baseURL is provided through the configuration, it will be the one used and any baseURL configuration from a configuration file will be ignored as systemjs only allows to configure baseURL once._
+_if baseURL is provided through the configuration, it will be the one used and any subsequent **baseURL** configuration (even) from a configFile will be ignored as systemjs only allows to configure baseURL once._
 
 ### configFile: String
 
-path to an external configuration file (one with System.config calls).
+path to an external configuration file (one with System.config(...) calls).
 
 ### sfx: Boolean 
 > default: false
@@ -51,7 +51,7 @@ shortcut for passing the [build](#buildObject) object with a sourceMapsproperty
 
 ### builder: Object
 
-The configuration that is allowed when creating the builder instance. Basically systemjs configuration.
+The configuration that is allowed when creating the builder instance. Basically any valid systemjs configuration (same as calling System.config()).
 see [builder documentation](https://github.com/systemjs/builder/blob/master/README.md).
 
 <a id="buildObject">

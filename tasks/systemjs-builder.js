@@ -1,6 +1,9 @@
 module.exports = function (grunt) {
     "use strict";
 
+    //todo: allow Arithmetic builds - https://github.com/systemjs/builder#example---arithmetic-expressions
+    //todo: use trace api for more advanced builds - https://github.com/systemjs/builder#example---direct-trace-api
+
     function task() {
 
         var buildQuickSettings = ["minify", "sourceMaps"],
@@ -79,7 +82,7 @@ module.exports = function (grunt) {
 
     function _buildSource(data, done, file) {
 
-        if (file.src.length > 1) {
+        if (file.src.length > 1) { //todo: support multiple src files using "&" - https://github.com/systemjs/builder#example---common-bundles
             grunt.fail.fatal("systemjs-builder-task - cant have more than one source file for the build process");
         }
 
