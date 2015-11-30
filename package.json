@@ -1,6 +1,6 @@
 {
   "name": "grunt-systemjs-builder",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "grunt task for building projects based on systemjs",
   "repository": {
     "type": "git",
@@ -29,6 +29,6 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "systemjs-builder": "^0.12.2"
+    "systemjs-builder": "^0.14.11"
   }
 }
