@@ -2,6 +2,7 @@
   "name": "test-grunt-systemjs-builder",
   "version": "0.1.0",
   "description": "example of using the builder",
+  "private": true,
   "main": "gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

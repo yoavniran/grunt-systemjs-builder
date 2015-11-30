@@ -15,23 +15,11 @@ module.exports = function (grunt) {
 		if (options.baseURL) {
 			grunt.verbose.writeln("systemjs-builder-task - using base url: " + options.baseURL);
 			builder.config({baseURL: options.baseURL});
-
-			if (options.configFile) {
-				var orgConfig = builder.config.bind(builder);
-
-				builder.config = function (cfg) { //need to do this to allow dynamic base url from grunt build to override the base url in the config file
-					if (cfg.baseURL) { //this is ugly but no choice because builder.loadConfig will override the baseURL provided in the config
-						delete cfg.baseURL;
-					}
-
-					orgConfig(cfg);
-				};
-			}
 		}
 
 		if (options.configFile) {
-
-			builder.loadConfig(options.configFile) //load external config file if one specified
+			var ignoreBaseUrlInConfFile = !!options.configFile;
+			builder.loadConfig(options.configFile, false, ignoreBaseUrlInConfFile) //load external config file if one specified - instr
 				.then(_build.bind(this, builder, options, done))
 				.catch(function (err) {
 					grunt.fail.fatal(err);
