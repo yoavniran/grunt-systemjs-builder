@@ -18,7 +18,7 @@ module.exports = function (grunt) {
 		}
 
 		if (options.configFile) {
-			var ignoreBaseUrlInConfFile = !!options.configFile;
+			var ignoreBaseUrlInConfFile = !!options.baseURL;
 			builder.loadConfig(options.configFile, false, ignoreBaseUrlInConfFile) //load external config file if one specified - instr
 				.then(_build.bind(this, builder, options, done))
 				.catch(function (err) {
