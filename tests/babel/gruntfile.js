@@ -12,10 +12,9 @@ module.exports = function (grunt) {
 					minify: false,
 					sfx: false
 				},
-				files: [{
-					src: "app/init.js",
-					dest: "dist/demo.js"
-				}]
+				files: {
+					"dist/demo.js": "app/init.js"
+				}
 			}
 		}
 	});
