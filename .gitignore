@@ -5,3 +5,5 @@ node_modules/
 tests/example/jspm_packages/
 /tests/example/src/main/javascript/min
 tests/example/node_modules/
+tests/babel/jspm_packages
+tests/babel/node_modules
