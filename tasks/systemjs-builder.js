@@ -82,7 +82,7 @@ module.exports = function (grunt) {
 
 		var builder = data.builder,
 			options = data.options,
-			src = file.src[0];
+			src = file.src[0] || file.orig.src[0]; //falls back the this original string which may include arithmetic. if not it'll fail also
 
 		grunt.verbose.writeln("systemjs-builder-task - about to build source: " + src);
 
