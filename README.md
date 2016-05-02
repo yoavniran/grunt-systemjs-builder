@@ -74,7 +74,7 @@ grunt.initConfig({
 	            options: {
 	                sfx: true,
 	                baseURL: "./target",
-	                configFile: "./target/config.js"
+	                configFile: "./target/config.js",
                 	minify: true,
 					build: {
 					  mangle: false
