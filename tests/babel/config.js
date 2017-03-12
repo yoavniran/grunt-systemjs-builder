@@ -1,5 +1,5 @@
 System.config({
-  baseURL: "/grunt-systemjs-builder/tests/babel/",
+  baseURL: "",
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {

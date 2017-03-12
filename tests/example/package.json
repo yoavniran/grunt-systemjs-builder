@@ -11,5 +11,8 @@
   "license": "MIT",
   "jspm": {
     "configFile": "src/main/javascript/config.js"
+  },
+  "devDependencies": {
+    "systemjs-builder": "^0.16.3"
   }
 }

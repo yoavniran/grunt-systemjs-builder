@@ -1,5 +1,5 @@
 System.config({
-  baseURL: "/grunt-systemjs-builder/tests/nojspm/",
+  baseURL: "",
   defaultJSExtensions: true,
   transpiler: "babel",
   babelOptions: {

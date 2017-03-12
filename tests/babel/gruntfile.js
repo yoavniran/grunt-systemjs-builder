@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 		systemjs: {
 			es6: {
 				options: {
-					baseURL: "/",
+					baseURL: "",
 					configFile: "config.js",
 					minify: false,
 					sfx: false
