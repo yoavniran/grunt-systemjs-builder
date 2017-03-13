@@ -89,3 +89,10 @@ grunt.initConfig({
 	        }
 });
 ```
+
+## Change Log
+
+### 1.0.0
+
+* upgraded dependency on systemjs-builder to allow 0.16.x installs
+* upgraded grunt dependency to 1.0.1
